@@ -14,36 +14,29 @@ html, body {
 
 #hero {
   height: 100vh;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow: visible;
 }
 
 #hero-text {
+  margin-top: 22%;
   font-size: 4rem;
   color: rgba(255,255,255,0.6);
   text-align: center;
-  position: fixed; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  transition: transform 0.1s linear, opacity 0.1s linear;
   text-shadow:
     1px 1px 2px rgba(0,0,0,0.5) inset,
     -1px -1px 2px rgba(255,255,255,0.2) inset;
 }
 
 #scroll-down {
-    position: absolute;
+  margin-top: 400px;
+  justify-self: center;
     bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 1rem;
     color: rgba(255,255,255,0.7);
     opacity: 1;
-    animation: blink 1s infinite alternate;
+    animation: blink 0.5s infinite alternate;
 }
 
 @keyframes blink {
@@ -58,7 +51,7 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   min-height: 100vh;
 }
 
@@ -71,16 +64,39 @@ html, body {
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.2);
   transition: 0.3s;
+  text-align: center;
+}
+
+.code-link2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: 0.3s;
+  text-align: center;
 }
 
 .code-link.hash { color: #569CD6; }
 .code-link.angle { color: #C586C0; }
 .code-link.amp   { color: #9CDCFE; }
 
+.code-link2.hash { color: #569CD6; }
+.code-link2.angle { color: #C586C0; }
+.code-link2.amp   { color: #9CDCFE; }
+
 .code-link:hover {
   background: rgba(255,255,255,0.2);
-  transform: translateY(-2px);
   scale: 110%;  
+  transition: background 0.3s, transform 0.3s, scale 0.3s;
+
+}
+
+.code-link2:hover {
+  background: rgba(255,255,255,0.2);
+  scale: 110%;
   transition: background 0.3s, transform 0.3s, scale 0.3s;
 }
 
@@ -88,11 +104,13 @@ html, body {
   font-size: 4rem;
   text-align: center; 
   margin-top: 2rem;
+  color: white;
+  text-decoration: none;
 }
 
 #links2 {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
   align-items: center;
   justify-content: center;
   gap: 2rem;
